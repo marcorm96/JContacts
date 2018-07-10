@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 5-lug-2018 17.34.31 by Hibernate Tools 5.3.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="jcontactsdb" dynamic-insert="false" dynamic-update="false" mutable="true" name="it.jcontacts.models.Contatti" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="CONTATTI">
+        <id name="idContatto" type="java.lang.Integer">
+            <column name="ID_CONTATTO"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="nome" optimistic-lock="true" type="string" unique="false">
+            <column length="128" name="NOME" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="cognome" optimistic-lock="true" type="string" unique="false">
+            <column length="128" name="COGNOME" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="256" name="EMAIL"/>
+        </property>
+        <property generated="never" lazy="false" name="indirizzo" optimistic-lock="true" type="string" unique="false">
+            <column length="1024" name="INDIRIZZO"/>
+        </property>
+        <property generated="never" lazy="false" name="telefono" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="TELEFONO"/>
+        </property>
+    </class>
+</hibernate-mapping>
